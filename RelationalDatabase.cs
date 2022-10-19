@@ -59,7 +59,7 @@ namespace Lab2Solution
                 cmd.Parameters.AddWithValue("id", entry.Id);
 
                 cmd.ExecuteNonQuery();
-
+                con.Close();
             }
             catch (IOException ioe)
             {
@@ -105,7 +105,7 @@ namespace Lab2Solution
                 cmd.Parameters.AddWithValue("id", entry.Id);
 
                 cmd.ExecuteNonQuery();
-
+                con.Close();
                 return true;
             }
             catch (IOException ioe)

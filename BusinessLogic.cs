@@ -1,4 +1,5 @@
-﻿using System.Collections.ObjectModel;
+﻿using Java.Util.Regex;
+using System.Collections.ObjectModel;
 
 namespace Lab2Solution
 {
@@ -48,6 +49,10 @@ namespace Lab2Solution
 
         private InvalidFieldError CheckEntryFields(string clue, string answer, int difficulty, string date)
         {
+            String regex = "^[0-3]?[0-9]/[0-3]?[0-9]/(?:[0-9]{2})?[0-9]{2}$";
+            Pattern pattern = Pattern.Compile(regex);
+            Matcher matcher = pattern.Matcher(date);
+
             if (clue.Length < 1 || clue.Length > MAX_CLUE_LENGTH)
             {
                 return InvalidFieldError.InvalidClueLength;
@@ -59,6 +64,10 @@ namespace Lab2Solution
             if (difficulty < 0 || difficulty > MAX_DIFFICULTY)
             {
                 return InvalidFieldError.InvalidDifficulty;
+            }
+            if (!matcher.Matches())
+            {
+                return InvalidFieldError.InvalidDate;
             }
 
             return InvalidFieldError.NoError;
