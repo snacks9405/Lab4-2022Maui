@@ -1,5 +1,5 @@
-﻿using Java.Util.Regex;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
+using System.Globalization;
 
 namespace Lab2Solution
 {
@@ -49,9 +49,7 @@ namespace Lab2Solution
 
         private InvalidFieldError CheckEntryFields(string clue, string answer, int difficulty, string date)
         {
-            String regex = "^[0-3]?[0-9]/[0-3]?[0-9]/(?:[0-9]{2})?[0-9]{2}$";
-            Pattern pattern = Pattern.Compile(regex);
-            Matcher matcher = pattern.Matcher(date);
+            DateTime dateClean;
 
             if (clue.Length < 1 || clue.Length > MAX_CLUE_LENGTH)
             {
@@ -65,7 +63,9 @@ namespace Lab2Solution
             {
                 return InvalidFieldError.InvalidDifficulty;
             }
-            if (!matcher.Matches())
+            if (!DateTime.TryParseExact(date, "MM/dd/yyyy",
+                                    CultureInfo.InvariantCulture,
+                                    DateTimeStyles.None, out dateClean))
             {
                 return InvalidFieldError.InvalidDate;
             }

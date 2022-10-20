@@ -1,18 +1,19 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rodri_egxtw4o\\Desktop\\TestProject1\\TestProject1.csproj": {}
+    "C:\\Users\\rodri_egxtw4o\\Desktop\\Lab4.2022Maui\\TestProject1\\TestProject1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rodri_egxtw4o\\Desktop\\TestProject1\\TestProject1.csproj": {
+    "C:\\Users\\rodri_egxtw4o\\Desktop\\Lab4.2022Maui\\Lab4-2022Maui\\Lab2Solution.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rodri_egxtw4o\\Desktop\\TestProject1\\TestProject1.csproj",
-        "projectName": "TestProject1",
-        "projectPath": "C:\\Users\\rodri_egxtw4o\\Desktop\\TestProject1\\TestProject1.csproj",
+        "projectUniqueName": "C:\\Users\\rodri_egxtw4o\\Desktop\\Lab4.2022Maui\\Lab4-2022Maui\\Lab2Solution.csproj",
+        "projectName": "Lab2Solution",
+        "projectPath": "C:\\Users\\rodri_egxtw4o\\Desktop\\Lab4.2022Maui\\Lab4-2022Maui\\Lab2Solution.csproj",
         "packagesPath": "C:\\Users\\rodri_egxtw4o\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rodri_egxtw4o\\Desktop\\TestProject1\\obj\\",
+        "outputPath": "C:\\Users\\rodri_egxtw4o\\Desktop\\Lab4.2022Maui\\Lab4-2022Maui\\obj\\",
         "projectStyle": "PackageReference",
+        "crossTargeting": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
@@ -22,7 +23,10 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net6.0-android",
+          "net6.0-ios",
+          "net6.0-maccatalyst",
+          "net6.0-windows10.0.19041.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -30,8 +34,20 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net6.0-android31.0": {
+            "targetAlias": "net6.0-android",
+            "projectReferences": {}
+          },
+          "net6.0-ios15.4": {
+            "targetAlias": "net6.0-ios",
+            "projectReferences": {}
+          },
+          "net6.0-maccatalyst15.4": {
+            "targetAlias": "net6.0-maccatalyst",
+            "projectReferences": {}
+          },
+          "net6.0-windows10.0.19041": {
+            "targetAlias": "net6.0-windows10.0.19041.0",
             "projectReferences": {}
           }
         },
@@ -42,28 +58,26 @@
         }
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net6.0-android31.0": {
+          "targetAlias": "net6.0-android",
           "dependencies": {
-            "Microsoft.NET.Test.Sdk": {
+            "CommunityToolkit.Mvvm": {
               "target": "Package",
-              "version": "[17.1.0, )"
+              "version": "[8.0.0, )"
             },
-            "NUnit": {
+            "Microsoft.Maui.Dependencies": {
               "target": "Package",
-              "version": "[3.13.3, )"
+              "version": "[6.0.536, )",
+              "autoReferenced": true
             },
-            "NUnit.Analyzers": {
+            "Microsoft.Maui.Extensions": {
               "target": "Package",
-              "version": "[3.3.0, )"
+              "version": "[6.0.536, )",
+              "autoReferenced": true
             },
-            "NUnit3TestAdapter": {
+            "Npgsql": {
               "target": "Package",
-              "version": "[4.2.1, )"
-            },
-            "coverlet.collector": {
-              "target": "Package",
-              "version": "[3.1.2, )"
+              "version": "[6.0.7, )"
             }
           },
           "imports": [
@@ -78,6 +92,321 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.Android": {
+              "privateAssets": "all"
+            },
+            "Microsoft.Maui.Controls": {
+              "privateAssets": "all"
+            },
+            "Microsoft.Maui.Core": {
+              "privateAssets": "all"
+            },
+            "Microsoft.Maui.Essentials": {
+              "privateAssets": "all"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        },
+        "net6.0-ios15.4": {
+          "targetAlias": "net6.0-ios",
+          "dependencies": {
+            "CommunityToolkit.Mvvm": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Maui.Dependencies": {
+              "target": "Package",
+              "version": "[6.0.536, )",
+              "autoReferenced": true
+            },
+            "Microsoft.Maui.Extensions": {
+              "target": "Package",
+              "version": "[6.0.536, )",
+              "autoReferenced": true
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[6.0.7, )"
+            },
+            "System.Runtime.InteropServices.NFloat.Internal": {
+              "target": "Package",
+              "version": "[6.0.1, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.iOS": {
+              "privateAssets": "all"
+            },
+            "Microsoft.Maui.Controls": {
+              "privateAssets": "all"
+            },
+            "Microsoft.Maui.Core": {
+              "privateAssets": "all"
+            },
+            "Microsoft.Maui.Essentials": {
+              "privateAssets": "all"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        },
+        "net6.0-maccatalyst15.4": {
+          "targetAlias": "net6.0-maccatalyst",
+          "dependencies": {
+            "CommunityToolkit.Mvvm": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Maui.Dependencies": {
+              "target": "Package",
+              "version": "[6.0.536, )",
+              "autoReferenced": true
+            },
+            "Microsoft.Maui.Extensions": {
+              "target": "Package",
+              "version": "[6.0.536, )",
+              "autoReferenced": true
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[6.0.7, )"
+            },
+            "System.Runtime.InteropServices.NFloat.Internal": {
+              "target": "Package",
+              "version": "[6.0.1, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "xamarinios10",
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.MacCatalyst": {
+              "privateAssets": "all"
+            },
+            "Microsoft.Maui.Controls": {
+              "privateAssets": "all"
+            },
+            "Microsoft.Maui.Core": {
+              "privateAssets": "all"
+            },
+            "Microsoft.Maui.Essentials": {
+              "privateAssets": "all"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        },
+        "net6.0-windows10.0.19041": {
+          "targetAlias": "net6.0-windows10.0.19041.0",
+          "dependencies": {
+            "CommunityToolkit.Mvvm": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Maui.Dependencies": {
+              "target": "Package",
+              "version": "[6.0.536, )",
+              "autoReferenced": true
+            },
+            "Microsoft.Maui.Extensions": {
+              "target": "Package",
+              "version": "[6.0.536, )",
+              "autoReferenced": true
+            },
+            "Microsoft.Windows.SDK.BuildTools": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[10.0.22000.194, )",
+              "autoReferenced": true
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[6.0.7, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
+              "version": "[6.0.9, 6.0.9]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Runtime.win-x64",
+              "version": "[6.0.9, 6.0.9]"
+            },
+            {
+              "name": "Microsoft.Windows.SDK.NET.Ref",
+              "version": "[10.0.19041.27, 10.0.19041.27]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
+              "version": "[6.0.9, 6.0.9]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.Maui.Controls": {
+              "privateAssets": "all"
+            },
+            "Microsoft.Maui.Core": {
+              "privateAssets": "all"
+            },
+            "Microsoft.Maui.Essentials": {
+              "privateAssets": "all"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.Windows.SDK.NET.Ref": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "android-arm": {
+          "#import": []
+        },
+        "android-arm64": {
+          "#import": []
+        },
+        "android-x64": {
+          "#import": []
+        },
+        "android-x86": {
+          "#import": []
+        },
+        "iossimulator-x64": {
+          "#import": []
+        },
+        "maccatalyst-x64": {
+          "#import": []
+        },
+        "win10-x64": {
+          "#import": []
+        }
+      }
+    },
+    "C:\\Users\\rodri_egxtw4o\\Desktop\\Lab4.2022Maui\\TestProject1\\TestProject1.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\rodri_egxtw4o\\Desktop\\Lab4.2022Maui\\TestProject1\\TestProject1.csproj",
+        "projectName": "TestProject1",
+        "projectPath": "C:\\Users\\rodri_egxtw4o\\Desktop\\Lab4.2022Maui\\TestProject1\\TestProject1.csproj",
+        "packagesPath": "C:\\Users\\rodri_egxtw4o\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rodri_egxtw4o\\Desktop\\Lab4.2022Maui\\TestProject1\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\rodri_egxtw4o\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0-android"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0-android31.0": {
+            "targetAlias": "net6.0-android",
+            "projectReferences": {
+              "C:\\Users\\rodri_egxtw4o\\Desktop\\Lab4.2022Maui\\Lab4-2022Maui\\Lab2Solution.csproj": {
+                "projectPath": "C:\\Users\\rodri_egxtw4o\\Desktop\\Lab4.2022Maui\\Lab4-2022Maui\\Lab2Solution.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0-android31.0": {
+          "targetAlias": "net6.0-android",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.1.0, )"
+            },
+            "coverlet.collector": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.4.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.Android": {
+              "privateAssets": "all"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
