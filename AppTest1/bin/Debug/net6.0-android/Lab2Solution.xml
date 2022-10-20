@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Lab2Solution</name>
+    </assembly>
+    <members>
+        <member name="T:Lab2Solution.BusinessLogic">
+            <summary>
+            Handles the BusinessLogic
+            </summary>
+        </member>
+        <member name="M:Lab2Solution.BusinessLogic.GetEntries(System.String)">
+            <summary>
+            Represents all entries
+            This also could have been a property
+            </summary>
+            <returns>ObservableCollection of entrties</returns>
+        </member>
+        <member name="M:Lab2Solution.BusinessLogic.CheckEntryFields(System.String,System.String,System.Int32,System.String)">
+            <summary>
+            Verifies that all the entry fields are valied
+            </summary>
+            <param name="clue"></param>
+            <param name="answer"></param>
+            <param name="difficulty"></param>
+            <param name="date"></param>
+            <returns>an error if there is an error, InvalidFieldError.None otherwise</returns>
+        </member>
+        <member name="M:Lab2Solution.BusinessLogic.AddEntry(System.String,System.String,System.Int32,System.String)">
+            <summary>
+            Adds an entry
+            </summary>
+            <param name="clue"></param>
+            <param name="answer"></param>
+            <param name="difficulty"></param>
+            <param name="date"></param>
+            <returns>an error if there is an error, InvalidFieldError.None otherwise</returns>
+        </member>
+        <member name="M:Lab2Solution.BusinessLogic.getUniqueID">
+            <summary>
+            gives entry a unique id number
+            </summary>
+            <returns>unique id number</returns>
+        </member>
+        <member name="M:Lab2Solution.BusinessLogic.DeleteEntry(System.Int32)">
+            <summary>
+            Deletes an entry
+            </summary>
+            <param name="entryId"></param>
+            <returns>an erreor if there is one, EntryDeletionError.NoError otherwise</returns>
+        </member>
+        <member name="M:Lab2Solution.BusinessLogic.EditEntry(System.String,System.String,System.Int32,System.String,System.Int32)">
+            <summary>
+            Edits an Entry
+            </summary>
+            <param name="clue"></param>
+            <param name="answer"></param>
+            <param name="difficulty"></param>
+            <param name="date"></param>
+            <param name="id"></param>
+            <returns>an error if there is one, EntryEditError.None otherwise</returns>
+        </member>
+        <member name="T:Lab2Solution.IBusinessLogic">
+            <summary>
+            The interface for BusinessLogic
+            </summary>
+        </member>
+        <member name="M:Lab2Solution.MainPage.OnToggled(System.Object,Microsoft.Maui.Controls.ToggledEventArgs)">
+            <summary>
+            toggles sorting based on clue or answer
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Lab2Solution.MainPage.AddEntry(System.Object,System.EventArgs)">
+            <summary>
+            adds entry 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Lab2Solution.MainPage.DeleteEntry(System.Object,System.EventArgs)">
+            <summary>
+            deletes entry
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Lab2Solution.MainPage.EditEntry(System.Object,System.EventArgs)">
+            <summary>
+            edits entry
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Lab2Solution.MainPage.EntriesLV_ItemSelected(System.Object,Microsoft.Maui.Controls.SelectedItemChangedEventArgs)">
+            <summary>
+            neat way to grab the selected entry. 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:Lab2Solution.RelationalDatabase">
+            <summary>
+            This is the database class, currently a FlatFileDatabase
+            </summary>
+        </member>
+        <member name="F:Lab2Solution.RelationalDatabase.entries">
+            <summary>
+            A local version of the database, we *might* want to keep this in the code and merely
+            adjust it whenever Add(), Delete() or Edit() is called
+            Alternatively, we could delete this, meaning we will reach out to bit.io for everything
+            What are the costs of that?
+            There are always tradeoffs in software engineering.
+            </summary>
+        </member>
+        <member name="M:Lab2Solution.RelationalDatabase.#ctor">
+            <summary>
+            Here or thereabouts initialize a connectionString that will be used in all the SQL calls
+            </summary>
+        </member>
+        <member name="M:Lab2Solution.RelationalDatabase.AddEntry(Lab2Solution.Entry)">
+            <summary>
+            Adds an entry to the database
+            </summary>
+            <param name="entry">the entry to add</param>
+        </member>
+        <member name="M:Lab2Solution.RelationalDatabase.FindEntry(System.Int32)">
+            <summary>
+            Finds a specific entry
+            </summary>
+            <param name="id">id to find</param>
+            <returns>the Entry (if available)</returns>
+        </member>
+        <member name="M:Lab2Solution.RelationalDatabase.DeleteEntry(Lab2Solution.Entry)">
+            <summary>
+            Deletes an entry 
+            </summary>
+            
+            <param name="entry">An entry, which is presumed to exist</param>
+        </member>
+        <member name="M:Lab2Solution.RelationalDatabase.EditEntry(Lab2Solution.Entry)">
+            <summary>
+            Edits an entry
+            </summary>
+            <param name="replacementEntry"></param>
+            <returns>true if editing was successful</returns>
+        </member>
+        <member name="M:Lab2Solution.RelationalDatabase.GetEntries(System.String)">
+            <summary>
+            Retrieves all the entries
+            </summary>
+            <returns>all of the entries</returns>
+        </member>
+        <member name="M:Lab2Solution.RelationalDatabase.InitializeConnectionString">
+            <summary>
+            Creates the connection string to be utilized throughout the program
+            
+            </summary>
+        </member>
+    </members>
+</doc>
